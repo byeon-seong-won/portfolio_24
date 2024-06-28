@@ -1,0 +1,39 @@
+
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;}
+html, body {height:100%;}
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+ul {list-style: none;}
+form, input {border: none;}
+
+
+
+body {
+  font-family: 'GrandSlang', 'Noto sans KR', sans-serif;
+  background: #000;
+  letter-spacing: -.02em;
+  transition: background-color 0.3s;
+  word-break: keep-all;
+}
+
+/* body.hover1 {
+  background-color :#c89d7b;
+}
+body.hover2 {
+  background-color :#217790;
+}
+body.hover3 {
+  background-color :#9b262e;
+}
+body.hover4 {
+  background-color :#064e64;
+}
+body.hover5 {
+  background-color :#fee354;
+}
+body.hover6 {
+  background-color :#51855e;
+} */
