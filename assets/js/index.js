@@ -178,7 +178,7 @@ myprj
     'z-index' : '100',
   }, 'sect01-start')
   .to('body', {
-    'background-color' : '#debba7',
+    'background-color' : '#0a0259',
     duration: 1,
     ease: "none",
   }, 'sect01-start')
@@ -207,7 +207,9 @@ myprj
     'z-index' : '100',
   }, 'sect02-start')
   .to('body', {
-    'background-color' : '#217790',
+    // 'background-color' : '#217790',
+    // 'background-color' : '#fc9891',
+    'background-color' : '#ff7878',
     duration: 1,
     ease: "none",
   }, 'sect02-start')
@@ -238,6 +240,7 @@ myprj
   }, 'sect03-start')
   .to('body', {
     'background-color' : '#9b262e',
+    // 'background-color' : '#82dc28',
     duration: 1,
     ease: "none",
   }, 'sect03-start')
@@ -267,7 +270,8 @@ myprj
     'z-index' : '100',
   }, 'sect04-start')
   .to('body', {
-    'background-color' : '#064e64',
+    'background-color' : '#f1c3e1',
+    // 'background-color' : '#064e64',
     duration: 1,
     ease: "none",
   }, 'sect04-start')
@@ -298,8 +302,8 @@ myprj
   }, 'sect05-start')
   .to('body', {
     // 'background-color' : '#09182b',
-    'background-color' : '#9fc1da',
-
+    // 'background-color' : '#9fc1da',
+    'background-color' : '#e3bd5a',
     duration: 1,
     ease: "none",
   }, 'sect05-start')

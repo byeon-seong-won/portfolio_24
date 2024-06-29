@@ -577,7 +577,7 @@ section.on {
   margin-top: 500px;
   overflow: hidden;
   font-family: 'PPNeueMontreal';
-  border: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
 }
 .sc-banner .banner-line {
   display: flex;
