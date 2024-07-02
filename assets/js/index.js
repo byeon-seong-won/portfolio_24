@@ -107,8 +107,8 @@ $(function() {
     'font-weight' : 'bold'
   },'mainTxt')
   .to('.sc-visual .hero-line-5',{
-    'transform': 'translateY(-10vh)',
-    autoAlpha: 0.5,
+    'transform': 'translateY(-50vh)',
+    autoAlpha: 0.1,
     scale : 1,
   })
 
