@@ -101,13 +101,13 @@ $(function() {
   },'mainTxt')
   
   .to('.sc-visual .hero-line-5',{
-    'transform': 'translateY(-60vh)',
+    'transform': 'translateY(-100vh)',
     autoAlpha: 1,
     scale : 5,
     'font-weight' : 'bold'
   },'mainTxt')
   .to('.sc-visual .hero-line-5',{
-    'transform': 'translateY(-60vh)',
+    'transform': 'translateY(-10vh)',
     autoAlpha: 0.5,
     scale : 1,
   })
@@ -178,7 +178,7 @@ myprj
     'z-index' : '100',
   }, 'sect01-start')
   .to('body', {
-    'background-color' : '#0a0259',
+    'background-color' : '#0a0255',
     duration: 1,
     ease: "none",
   }, 'sect01-start')
@@ -208,8 +208,8 @@ myprj
   }, 'sect02-start')
   .to('body', {
     // 'background-color' : '#217790',
-    // 'background-color' : '#fc9891',
-    'background-color' : '#ff7878',
+    'background-color' : '#e00011',
+    // 'background-color' : '#9b262e',
     duration: 1,
     ease: "none",
   }, 'sect02-start')
@@ -239,8 +239,8 @@ myprj
     'z-index' : '100',
   }, 'sect03-start')
   .to('body', {
-    'background-color' : '#9b262e',
-    // 'background-color' : '#82dc28',
+    // 'background-color' : '#9b262e',
+    'background-color' : '#82dc28',
     duration: 1,
     ease: "none",
   }, 'sect03-start')
@@ -270,7 +270,7 @@ myprj
     'z-index' : '100',
   }, 'sect04-start')
   .to('body', {
-    'background-color' : '#f1c3e1',
+    'background-color' : '#ff4b67',
     // 'background-color' : '#064e64',
     duration: 1,
     ease: "none",
@@ -457,7 +457,7 @@ myprj
     var mainimgSlide = new Swiper('.sc-fwprj .fwprj-slide', {
       slidesPerView: 'auto',
       centeredSlides: true,
-      spaceBetween: 20,
+      spaceBetween: 0,
       speed: 1000,
       observer: true,
       observeParents: true,
