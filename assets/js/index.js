@@ -101,15 +101,15 @@ $(function() {
   },'mainTxt')
   
   .to('.sc-visual .hero-line-5',{
-    'transform': 'translateY(-100vh)',
+    'transform': 'translateY(-60vh)',
     autoAlpha: 1,
     scale : 5,
     'font-weight' : 'bold'
   },'mainTxt')
   .to('.sc-visual .hero-line-5',{
     'transform': 'translateY(-50vh)',
-    autoAlpha: 0.1,
-    scale : 1,
+    autoAlpha: 0,
+    scale : 0,
   })
 
 
@@ -121,7 +121,7 @@ $(function() {
   const count_01 = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-intro-1",
-      start:"0% 70%",
+      start:"20% 70%",
       end:"100% 100%",
       scrub:1,
       ease: "power4.out",

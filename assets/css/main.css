@@ -81,10 +81,13 @@ header {
 /* 메인비주얼 */
 .sc-visual {
   position: relative;
-  height: 800vh;
+  /* height: 800vh; */
+  height: 500vh;
 }
 .sc-visual .sticky-wrapper {
-  height: 800vh;
+  /* height: 800vh; */
+  height: 500vh;
+
 }
 .sc-visual .sticky {
   position: sticky;
