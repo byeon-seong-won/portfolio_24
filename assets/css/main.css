@@ -301,7 +301,7 @@ header {
 
 
 .section-wrap section .title .sub-tit a {
-  padding: 15px 10px;
+  padding: 10px 5px;
   display: inline-block;
   border-radius: 10px;
   border: 0.12rem solid #fff;
@@ -312,9 +312,30 @@ header {
   margin: 0 3px 0;
 }
 
+
 .section-wrap section .title .sub-tit a:hover {
-  opacity: 0.3;
+  border: none;
+  color: #fff;
 }
+.section-wrap .section01 .title .sub-tit a:hover {
+  background-color: #0a0255;
+}
+.section-wrap .section02 .title .sub-tit a:hover {
+  background-color: #e00011;
+}
+.section-wrap .section03 .title .sub-tit a:hover {
+  background-color: #82dc28;
+}
+.section-wrap .section04 .title .sub-tit a:hover {
+  background-color: #ff4b67;
+}
+.section-wrap .section05 .title .sub-tit a:hover {
+  background-color: #e3bd5a;
+}
+.section-wrap .section06 .title .sub-tit a:hover {
+  background-color: #16a340;
+}
+
 
 .section-wrap section .title .sub-tit .sub-title {
   font-size: 22px;
