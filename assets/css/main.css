@@ -141,7 +141,7 @@ header {
   text-align: center;
   font-weight: 500;
   line-height: .95;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   /* margin-bottom: 38px; */
 }
 .main-cont .group-center > span {
@@ -263,6 +263,8 @@ header {
   pointer-events: none;
   z-index: 200;
   height: 100%;
+  max-width: 80%;
+  object-fit: cover;
 }
 
 
@@ -290,6 +292,8 @@ header {
   position: relative;
   font-family: 'PPNeueMontreal';
   font-weight: 500;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .section-wrap section .title .sub-tit span {
@@ -355,7 +359,7 @@ section.on {
 /* 메인텍스트 */
 .main-cont .group-center .hero-line {
   display: block;
-  font-size:7vw;
+  font-size:8vw;
   overflow: hidden;
   text-align: center;
 }
@@ -369,7 +373,6 @@ section.on {
   height: 100px;
   width:auto;
   display:inline-block;
-  border: 2px solid blue;
 }
 .main-cont .group-center .hero-picto svg,
 .main-cont .group-center .hero-picto img {
@@ -859,39 +862,79 @@ section.on {
 
 
 
-/* 1224px~1025px */
 @media (max-width:1440px) {
   .sc-work .list_li p {
     font-size: 80px;
   }
 }
 
+@media (max-width:1224px) {
+  .sc-intro .inner, .sc-intro .intro-cont {
+    width: 100%;
+  }
+  .sc-intro .sticky,
+  .sc-intro .intro-cont .wrap {
+    justify-content: center;
+  }
+  .sc-intro .intro-cont .section-title {
+    font-size: 3rem;
+    padding-right: 0;
+    margin-top: 0;
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+  }
+  .sc-intro .sticky-wrapper {
+    height: 25vh;
+  }
+  .sc-work .list_li p {
+    font-size: 60px;
+  }
+}
 
 @media (max-width:1200px) {
-  .sc-intro .intro-cont .section-title {
-    font-size: 4rem;
-    padding-right: 10%;
-    margin-top: 0;
+
+  .main-cont .group-center .hero-line  {
+    font-size: 10vw;
   }
+  .sc-intro .sticky-wrapper {
+    height: 25vh;
+  }
+  .section-wrap section .title h3 {
+    font-size: 7vw;
+  }
+  .section-wrap section .title .sub-tit .sub-title,
+  .section-wrap section .title .sub-tit span {
+    font-size: 18px;
+  }
+  .section-wrap section .title .sub-tit a {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
 }
 
 
-
-
-
-
-
-
-/* 1224px~1025px */
-@media (max-width:1224px) {
-  .sc-work .list_li p {
-    font-size: 40px;
-  }
-}
-/* 1024px ~ 768px */
 @media (max-width:1024px) {
+
+  .main-cont .group-center .hero-line  {
+    font-size: 7vw;
+  }
+  .section-wrap section img {
+    width: 70%;
+  }
   .sc-fwprj .swiper-slide {
     width: 80% !important;
+  }
+  .section-wrap section .title .sub-tit .sub-title,
+  .section-wrap section .title .sub-tit span {
+    font-size: 16px;
+  }
+  .section-wrap section .title .sub-tit a {
+    width: 40%;
+    padding: 10px;
+    font-size: 15px;
   }
 
 }
@@ -899,27 +942,41 @@ section.on {
 
 
 /* 모바일  767px~320px */
-@media (max-width:767px) {
-  .sc-intro .sticky-wrapper {
-    height: 10vh;
-  }
-  .sc-intro .intro-cont .wrap {
-    justify-content: end;
-  }
+@media (max-width:768px) {
 
+  .main-cont .group-center .hero-line {
+    font-size: 8vw;
+}
+  .sc-intro .sticky-wrapper {
+    height: 15vh;
+  }
+  .section-wrap section .title h3 {
+    font-size: 10vw;
+  }
   .sc-banner {
     font-size: 30px;
   }
-
+  .section-wrap section img {
+    width: 100%;
+    max-width: 100%;
+  }
   .sc-banner,
   .sc-work,
   .sc-intro-3 {
     margin-top: 30vh;
   }
   .sc-intro .intro-cont .section-title {
-    font-size: 3rem;
+    font-size: 2rem;
+    width: 50%;
   }
-
+  .section-wrap section .title .sub-tit a {
+    width: 50%;
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+  .section-wrap section .title .sub-tit a {
+    margin-top: 10px;
+  }
   .sc-work .list_li p {
     font-size: 2rem;
   }
@@ -936,6 +993,15 @@ section.on {
   footer h3 {
     font-size: 2rem;
   }
+  .sc-banner .banner-line span {
+    font-size: 18px;
+  }
+  .sc-banner .hero-picto {
+    margin: 0 5px;
+  }
+  .sc-banner .banner-line span.ico-banner {
+    width: 10%;
+  }
 
 
   /* .mobile-wrap {
@@ -950,6 +1016,27 @@ section.on {
  .section-wrap section img {
   object-fit: cover;
  }
+
+
+
+}
+
+
+
+/* 모바일  767px~320px */
+@media (max-width:550px) {
+
+
+  .sc-intro .sticky-wrapper {
+    height: 10vh;
+  }
+
+
+
+
+
+
+
 
 
 
