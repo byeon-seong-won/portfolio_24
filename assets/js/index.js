@@ -134,7 +134,7 @@ $(function() {
     }
   })
   count_01
-  .to('.main-cont', {
+  .to('.sc-visual .main-cont', {
     autoAlpha: 0,
     ease: 'none',
   }, 'count_01')
@@ -430,7 +430,7 @@ myprj
 
   // --------------- fe projects --------------- 
   // --- bg 이미지 --- 
-  // var feBgSlide = new Swiper('.sc-fwprj .bg-slide', {
+  // var feBgSlide = new Swiper('.sc-fropj .bg-slide', {
   //   effect:"fade",
   // });
 
@@ -456,7 +456,7 @@ myprj
 
   // --- 리스트 이미지 --- 
 
-    var mainimgSlide = new Swiper('.sc-fwprj .fwprj-slide', {
+    var mainimgSlide = new Swiper('.sc-fropj .fropj-slide', {
       slidesPerView: 'auto',
       centeredSlides: true,
       spaceBetween: 0,
@@ -464,11 +464,11 @@ myprj
       observer: true,
       observeParents: true,
       navigation: {
-        nextEl: ".sc-fwprj .fwprj-slide .navi-next",
-        prevEl: ".sc-fwprj .fwprj-slide .navi-prev",
+        nextEl: ".sc-fropj .fropj-slide .navi-next",
+        prevEl: ".sc-fropj .fropj-slide .navi-prev",
       },
       pagination: {
-        el: ".sc-fwprj .fraction-box",
+        el: ".sc-fropj .fraction-box",
         type: "custom",
         renderCustom: function (swiper, current, total) {
           return `<span class="curr">${current}</span>
@@ -478,10 +478,10 @@ myprj
       },
       on: {
         "init" : function() {
-          $('.sc-fwprj .curr').text(this.realIndex+1);
+          $('.sc-fropj .curr').text(this.realIndex+1);
         },
         "slideChange" : function() {
-          $('.sc-fwprj .curr').text(this.realIndex+1);
+          $('.sc-fropj .curr').text(this.realIndex+1);
         }
       }
     });

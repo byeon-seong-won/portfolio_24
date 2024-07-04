@@ -6,22 +6,16 @@
 
 
 
-
-
-
 footer {
   padding: 10% 0;
   text-align: center;
 }
-
 footer h3 {
   color: #fff;
   font-size: 5rem;
-  
   width: 80%;
   margin: 0 auto;
 }
-
 footer .btn-link {
   display: flex;
   align-items: center;
@@ -43,11 +37,21 @@ footer .btn-link a:hover {
   color: #333;
 }
 
-
 small {
   font-family: 'PPNeueMontreal';
   color: #fff;
   font-size: 20px;
   margin-top: 20px;
   display: block;
+}
+
+
+
+@media (max-width:768px) {
+  footer {
+    padding: 20% 0;
+  }
+  footer h3 {
+    font-size: 2rem;
+  }
 }
