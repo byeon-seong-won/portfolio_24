@@ -44,6 +44,7 @@ $(function() {
   .to('.guage-area',{width : '100vw', height: '100vh', 'border-radius' : '0'}, 'display+=3')
   .set('.guage-area img',{autoAlpha :0}, 'display+=3')
   .to('.intro',{autoAlpha:0}, 'display-main')
+  .to('header',{autoAlpha:1}, 'display-main')
   .from(".sc-visual .hero-line span", 1.8, {
       y: 100,
       ease: "power4.out",

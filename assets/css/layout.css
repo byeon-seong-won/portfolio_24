@@ -6,6 +6,56 @@
 
 
 
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(51, 51, 51,0.7);
+  padding: 0 40px;
+  z-index: 1000;
+  opacity: 0;
+}
+header h1 {
+  width: 50px;
+}
+header h1 a {
+  display: block;
+  width: 100%;
+}
+header h1 a img {
+  width: 100%;
+}
+header #gnb {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header #gnb ul {
+  display: flex;
+  gap: 20px;
+}
+header #gnb li {
+  color: #fff;
+  font-size: 16px;
+}
+header #gnb li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+}
+
+
+
+
+/* footer */
 footer {
   padding: 10% 0;
   text-align: center;
@@ -47,11 +97,19 @@ small {
 
 
 
+
 @media (max-width:768px) {
   footer {
     padding: 20% 0;
   }
   footer h3 {
     font-size: 2rem;
+  }
+  header {
+    height: 60px;
+    padding: 0 20px;
+  }
+  header h1 {
+    width: 30px;
   }
 }
