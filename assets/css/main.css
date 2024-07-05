@@ -482,10 +482,10 @@ header {
   width: 60% !important;
   margin-right: 20px;
 }
-.sc-fropj .swiper-slide video {
+/* .sc-fropj .swiper-slide video {
   border-radius: 10px;
   overflow: hidden;
-}
+} */
 .sc-fropj .swiper-slide-active {
   opacity: 1;
 }
@@ -494,7 +494,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
   color: #fff;
   font-size: 20px;
   padding: 20px;

@@ -455,7 +455,6 @@ myprj
 
 
   // --- 리스트 이미지 --- 
-
     var mainimgSlide = new Swiper('.sc-fropj .fropj-slide', {
       slidesPerView: 'auto',
       centeredSlides: true,
