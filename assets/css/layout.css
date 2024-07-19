@@ -88,11 +88,9 @@ footer .btn-link a:hover {
   background: #fff;
   color: #333;
 }
-
 footer address {
   color: #fff;
 }
-
 footer address .addr {
   display: flex;
   align-items: center;
@@ -111,7 +109,6 @@ footer address .material-symbols-outlined {
   'GRAD' 0,
   'opsz' 24
 }
-
 footer small {
   color: #fff;
   font-size: 16px;
@@ -119,6 +116,30 @@ footer small {
   display: block;
   font-weight: 300;
 }
+
+
+
+
+/* 1441px~ */
+@media (max-width:1680px) {
+
+  footer h3 {
+    font-size: 100px;
+  }
+  footer address .addr {
+    font-size: 22px;
+  }
+}
+
+/* 1025px~1224px */
+@media (max-width:1224px) {
+  footer h3 {
+    font-size: 80px;
+  }
+}
+
+
+
 
 
 
@@ -137,5 +158,15 @@ footer small {
   }
   header h1 {
     width: 30px;
+  }
+  footer address .addr {
+    font-size: 20px;
+  }
+  footer .btn-link a {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  footer small {
+    font-size: 12px;
   }
 }

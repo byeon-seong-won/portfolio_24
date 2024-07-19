@@ -2,7 +2,7 @@ $(function() {
 
 
 
-
+  // 마우스 
   // $('.img-area').mousemove(function(e) {
   //   const pointerHeight = $('.pointer').height();
   //               const mouseY = e.offsetY - (pointerHeight / 2);
@@ -13,7 +13,7 @@ $(function() {
 
   
   
-  // --------------- 전체 부드러운 스크롤 --------------- 
+  // --------------- lenis --------------- 
     const lenis = new Lenis()
     lenis.on('scroll', (e) => {
     })
@@ -26,7 +26,11 @@ $(function() {
 
 
 
-  // --------------- 인트로 --------------- 
+
+
+
+
+  // --------------- intro --------------- 
   for (let i = 1; i < 16; i++) {
     firstClass=(i==1)?'on':'';
     $('.img-wrap').prepend(`<img src="./assets/img/ico-intro-${i}.png" alt="" class="${firstClass}">`)  
@@ -72,7 +76,7 @@ $(function() {
 
 
 
-  // --------------- 메인 텍스트 스크롤 --------------- 
+  // --------------- sc-visual --------------- 
   const mainTxt = gsap.timeline({
     scrollTrigger:{
         trigger:'.sc-visual .sticky-wrapper',
@@ -86,7 +90,6 @@ $(function() {
         },
       },
   })
-
   mainTxt
   .set('body',{
     'background-color' : '#000',
@@ -96,22 +99,18 @@ $(function() {
   },'mainTxt')
   .to('.sc-visual .hero-line-4',{
     autoAlpha: 0.1,
-    scale:0.4,
     'color' : '#000'
   },'mainTxt')
   .to('.sc-visual .hero-line-3',{
     autoAlpha: 0.1,
-    scale:0.4,
     'color' : '#000'
   },'mainTxt')
   .to('.sc-visual .hero-line-2',{
     autoAlpha: 0.1,
-    scale:0.4,
     'color' : '#000'
   },'mainTxt')
   .to('.sc-visual .hero-line-1',{
     autoAlpha: 0.1,
-    scale:0.4,
     'color' : '#000'
   },'mainTxt')
   .to('.sc-visual .hero-line-5',{
@@ -127,7 +126,7 @@ $(function() {
 
 
 
-  // --------------- 00 -> 01 카운트 --------------- 
+  // --------------- sc-intro 00 -> 01 --------------- 
   const count_01 = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-intro-1",
@@ -163,10 +162,10 @@ $(function() {
 
 
 
-  // --------------- projects --------------- 
+  // --------------- myprj --------------- 
   const froprj = gsap.timeline({
     scrollTrigger:{
-      trigger:'.section02-wrap .sticky-wrapper',
+      trigger:'.myprj-wrap .sticky-wrapper',
       start:"0% 0%",
       end:"100% 100%",
       scrub:1,
@@ -180,43 +179,43 @@ $(function() {
 
   froprj
   // section 01
-  .to('.section02-wrap .sticky-wrapper .fix-txt-wrapper', {
+  .to('.myprj-wrap .sticky-wrapper .fix-txt-cont', {
     width: '100vw',
     height: '100vh',
     ease: "none",
     delay:500,
     duration: 1500,
   }, 'froprj01-start')
-  .to('.section02-wrap .sticky-wrapper .fix-txt', {
+  .to('.myprj-wrap .sticky-wrapper .fix-txt', {
     autoAlpha: 1,
     ease: "none",
     duration: 1500,
   }, 'froprj01-start')
-  .set('.section02-wrap section:nth-child(1)', {
+  .set('.myprj-wrap section:nth-child(1)', {
     autoAlpha: 1,
     ease: "none",
     'z-index' : '100',
     delay:1000,
     duration: 1500,
   }, 'froprj01-start')
-  .set('.section02-wrap section:nth-child(1) .img-area', { 
+  .set('.myprj-wrap section:nth-child(1) .img-area', { 
     autoAlpha: 1,
     scale : 0.5,
     duration: 1500,
   }, 'froprj01-cont')
-  .to('.section02-wrap section:nth-child(1) .img-area', { 
+  .to('.myprj-wrap section:nth-child(1) .img-area', { 
     scale: 1,
     bottom: '10vh',
     ease: 'none', 
     duration: 1500,
   }, 'froprj01-cont')
-  .to('.section02-wrap section:nth-child(1) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(1) .img-area img', { 
     width: '100%',
     height: 'calc(100vh - 20vh)',
     ease: 'none', 
     duration: 1500,
   }, 'froprj01-cont')
-  .to('.section02-wrap section:nth-child(1) .img-area', { 
+  .to('.myprj-wrap section:nth-child(1) .img-area', { 
     bottom: '100vh',
     scale : 0.5,
     autoAlpha: 1,
@@ -224,13 +223,13 @@ $(function() {
     delay:3000,
     duration: 1500,
   },'froprj01-cont-end')
-  .to('.section02-wrap section:nth-child(1) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(1) .img-area img', { 
     scale : 1,
     ease: 'none', 
     delay:3000,
     duration: 1500,
   },'froprj01-cont-end')
-  .to('.section02-wrap section:nth-child(1)', {
+  .to('.myprj-wrap section:nth-child(1)', {
     autoAlpha: 0,
     ease: "none",
     duration: 1500,
@@ -238,31 +237,31 @@ $(function() {
 
 
   // section 02
-  .set('.section02-wrap section:nth-child(2)', {
+  .set('.myprj-wrap section:nth-child(2)', {
     autoAlpha: 1,
     ease: "none",
     'z-index' : '100',
     delay:1000,
     duration: 1500,
   }, 'froprj02-start')
-  .set('.section02-wrap section:nth-child(2) .img-area', { 
+  .set('.myprj-wrap section:nth-child(2) .img-area', { 
     autoAlpha: 1,
     scale : 0.5,
     duration: 1500,
   }, 'froprj02-cont')
-  .to('.section02-wrap section:nth-child(2) .img-area', { 
+  .to('.myprj-wrap section:nth-child(2) .img-area', { 
     scale: 1,
     bottom: '10vh',
     ease: 'none', 
     duration: 1500,
   }, 'froprj02-cont')
-  .to('.section02-wrap section:nth-child(2) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(2) .img-area img', { 
     width: '100%',
     height: 'calc(100vh - 20vh)',
     ease: 'none', 
     duration: 1500,
   }, 'froprj02-cont')
-  .to('.section02-wrap section:nth-child(2) .img-area', { 
+  .to('.myprj-wrap section:nth-child(2) .img-area', { 
     bottom: '100vh',
     scale : 0.5,
     autoAlpha: 1,
@@ -270,13 +269,13 @@ $(function() {
     delay:3000,
     duration: 1500,
   },'froprj02-cont-end')
-  .to('.section02-wrap section:nth-child(2) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(2) .img-area img', { 
     scale : 1,
     ease: 'none', 
     delay:3000,
     duration: 1500,
   },'froprj02-cont-end')
-  .to('.section02-wrap section:nth-child(2)', {
+  .to('.myprj-wrap section:nth-child(2)', {
     autoAlpha: 0,
     ease: "none",
     duration: 1500,
@@ -285,31 +284,31 @@ $(function() {
 
 
   // section 03
-  .set('.section02-wrap section:nth-child(3)', {
+  .set('.myprj-wrap section:nth-child(3)', {
     autoAlpha: 1,
     ease: "none",
     'z-index' : '100',
     delay:1000,
     duration: 1500,
   }, 'froprj03-start')
-  .set('.section02-wrap section:nth-child(3) .img-area', { 
+  .set('.myprj-wrap section:nth-child(3) .img-area', { 
     autoAlpha: 1,
     scale : 0.5,
     duration: 1500,
   }, 'froprj03-cont')
-  .to('.section02-wrap section:nth-child(3) .img-area', { 
+  .to('.myprj-wrap section:nth-child(3) .img-area', { 
     scale: 1,
     bottom: '10vh',
     ease: 'none', 
     duration: 1500,
   }, 'froprj03-cont')
-  .to('.section02-wrap section:nth-child(3) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(3) .img-area img', { 
     width: '100%',
     height: 'calc(100vh - 20vh)',
     ease: 'none', 
     duration: 1500,
   }, 'froprj03-cont')
-  .to('.section02-wrap section:nth-child(3) .img-area', { 
+  .to('.myprj-wrap section:nth-child(3) .img-area', { 
     bottom: '100vh',
     scale : 0.5,
     autoAlpha: 1,
@@ -317,13 +316,13 @@ $(function() {
     delay:3000,
     duration: 1500,
   },'froprj03-cont-end')
-  .to('.section02-wrap section:nth-child(3) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(3) .img-area img', { 
     scale : 1,
     ease: 'none', 
     delay:3000,
     duration: 1500,
   },'froprj03-cont-end')
-  .to('.section02-wrap section:nth-child(3)', {
+  .to('.myprj-wrap section:nth-child(3)', {
     autoAlpha: 0,
     ease: "none",
     duration: 1500,
@@ -332,31 +331,31 @@ $(function() {
 
 
    // section 04
-  .set('.section02-wrap section:nth-child(4)', {
+  .set('.myprj-wrap section:nth-child(4)', {
     autoAlpha: 1,
     ease: "none",
     'z-index' : '100',
     delay:1000,
     duration: 1500,
   }, 'froprj04-start')
-  .set('.section02-wrap section:nth-child(4) .img-area', { 
+  .set('.myprj-wrap section:nth-child(4) .img-area', { 
     autoAlpha: 1,
     scale : 0.5,
     duration: 1500,
   }, 'froprj04-cont')
-  .to('.section02-wrap section:nth-child(4) .img-area', { 
+  .to('.myprj-wrap section:nth-child(4) .img-area', { 
     scale: 1,
     bottom: '10vh',
     ease: 'none', 
     duration: 1500,
   }, 'froprj04-cont')
-  .to('.section02-wrap section:nth-child(4) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(4) .img-area img', { 
     width: '100%',
     height: 'calc(100vh - 20vh)',
     ease: 'none', 
     duration: 1500,
   }, 'froprj04-cont')
-  .to('.section02-wrap section:nth-child(4) .img-area', { 
+  .to('.myprj-wrap section:nth-child(4) .img-area', { 
     bottom: '100vh',
     scale : 0.5,
     autoAlpha: 1,
@@ -364,13 +363,13 @@ $(function() {
     delay:3000,
     duration: 1500,
   },'froprj04-cont-end')
-  .to('.section02-wrap section:nth-child(4) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(4) .img-area img', { 
     scale : 1,
     ease: 'none', 
     delay:3000,
     duration: 1500,
   },'froprj04-cont-end')
-  .to('.section02-wrap section:nth-child(4)', {
+  .to('.myprj-wrap section:nth-child(4)', {
     autoAlpha: 0,
     ease: "none",
     duration: 1500,
@@ -378,31 +377,31 @@ $(function() {
 
 
   // section 05
-  .set('.section02-wrap section:nth-child(5)', {
+  .set('.myprj-wrap section:nth-child(5)', {
     autoAlpha: 1,
     ease: "none",
     'z-index' : '100',
     delay:1000,
     duration: 1500,
   }, 'froprj05-start')
-  .set('.section02-wrap section:nth-child(5) .img-area', { 
+  .set('.myprj-wrap section:nth-child(5) .img-area', { 
     autoAlpha: 1,
     scale : 0.5,
     duration: 1500,
   }, 'froprj05-cont')
-  .to('.section02-wrap section:nth-child(5) .img-area', { 
+  .to('.myprj-wrap section:nth-child(5) .img-area', { 
     scale: 1,
     bottom: '10vh',
     ease: 'none', 
     duration: 1500,
   }, 'froprj05-cont')
-  .to('.section02-wrap section:nth-child(5) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(5) .img-area img', { 
     width: '100%',
     height: 'calc(100vh - 20vh)',
     ease: 'none', 
     duration: 1500,
   }, 'froprj05-cont')
-  .to('.section02-wrap section:nth-child(5) .img-area', { 
+  .to('.myprj-wrap section:nth-child(5) .img-area', { 
     bottom: '100vh',
     scale : 0.5,
     autoAlpha: 1,
@@ -410,13 +409,13 @@ $(function() {
     delay:3000,
     duration: 1500,
   },'froprj05-cont-end')
-  .to('.section02-wrap section:nth-child(5) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(5) .img-area img', { 
     scale : 1,
     ease: 'none', 
     delay:3000,
     duration: 1500,
   },'froprj05-cont-end')
-  .to('.section02-wrap section:nth-child(5)', {
+  .to('.myprj-wrap section:nth-child(5)', {
     autoAlpha: 0,
     ease: "none",
     duration: 1500,
@@ -424,32 +423,32 @@ $(function() {
 
 
 
-  // section 06
-  .set('.section02-wrap section:nth-child(6)', {
+  // section 05
+  .set('.myprj-wrap section:nth-child(6)', {
     autoAlpha: 1,
     ease: "none",
     'z-index' : '100',
     delay:1000,
     duration: 1500,
   }, 'froprj06-start')
-  .set('.section02-wrap section:nth-child(6) .img-area', { 
+  .set('.myprj-wrap section:nth-child(6) .img-area', { 
     autoAlpha: 1,
     scale : 0.5,
     duration: 1500,
   }, 'froprj06-cont')
-  .to('.section02-wrap section:nth-child(6) .img-area', { 
+  .to('.myprj-wrap section:nth-child(6) .img-area', { 
     scale: 1,
     bottom: '10vh',
     ease: 'none', 
     duration: 1500,
   }, 'froprj06-cont')
-  .to('.section02-wrap section:nth-child(6) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(6) .img-area img', { 
     width: '100%',
     height: 'calc(100vh - 20vh)',
     ease: 'none', 
     duration: 1500,
   }, 'froprj06-cont')
-  .to('.section02-wrap section:nth-child(6) .img-area', { 
+  .to('.myprj-wrap section:nth-child(6) .img-area', { 
     bottom: '100vh',
     scale : 0.5,
     autoAlpha: 1,
@@ -457,18 +456,18 @@ $(function() {
     delay:3000,
     duration: 1500,
   },'froprj06-cont-end')
-  .to('.section02-wrap section:nth-child(6) .img-area img', { 
+  .to('.myprj-wrap section:nth-child(6) .img-area img', { 
     scale : 1,
     ease: 'none', 
     delay:3000,
     duration: 1500,
-  },'froprj01-cont-end')
-  .to('.section02-wrap section:nth-child(6)', {
+  },'froprj06-cont-end')
+  .to('.myprj-wrap section:nth-child(6)', {
     autoAlpha: 0,
     ease: "none",
     duration: 1500,
   }, "+=10")
-  .to('.section02-wrap .curtain-wrapper', {
+  .to('.myprj-wrap .video-wrapper', {
     autoAlpha: 0,
     ease: "none",
     delay:500,
@@ -487,7 +486,7 @@ $(function() {
 
 
 
-  // --------------- 01 -> 02 카운트 --------------- 
+  // --------------- sc-intro 01 -> 02 --------------- 
   const count_02 = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-intro-2",
@@ -517,11 +516,7 @@ $(function() {
     ease:'none',
         color : '#000'
   },'count_02')
-  // .to('body', {
-  //   'background-color' : '#fff',
-  //   duration: 1,
-  //   ease: "none",
-  // }, 'count_02')
+
 
 
 
@@ -532,21 +527,17 @@ $(function() {
   $(".work-item").each(function (index, element){
     var tl = new TimelineLite({paused:true});
     tl
-    // .set($(element).find(".thumb-area img")), {
-    //   "border" : '2px solid red',
-    //   yPercent: '-300'
-    // }
     .to($(element).find(".thumb-area p"), 0.5, {
         yPercent: '-300',
       },'img')
-      .to($(element).find(".hover li:nth-child(1) img"), 0.5, {
+      .to($(element).find(".hover-item:nth-child(1) img"), 0.5, {
         yPercent: '100',
       },'img')
-      .to($(element).find(".hover li:nth-child(2) img"), 0.5, {
+      .to($(element).find(".hover-item:nth-child(2) img"), 0.5, {
         delay: 0.1,
         yPercent: '100',
       },'img')
-      .to($(element).find(".hover li:nth-child(3) img"), 0.5, {
+      .to($(element).find(".hover-item:nth-child(3) img"), 0.5, {
         delay: 0.2,
         yPercent: '100',
       },'img')
@@ -562,7 +553,7 @@ $(function() {
 
 
 
-  // --------------- 02 -> 03 카운트 --------------- 
+  // --------------- sc-intro 02 -> 03 --------------- 
   const count_03 = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-intro-3",
@@ -597,6 +588,7 @@ $(function() {
 
 
 
+  
   // sc-banner
   bannertl = gsap.timeline({
     scrollTrigger:{
@@ -624,102 +616,29 @@ $(function() {
 
 
 
-  // sc-fe
-  const fetl = gsap.timeline({
-    scrollTrigger:{
-      trigger: ".sc-fe",
-      start:"0% 70%",
-      end:"100% 100%",
-      scrub:1,
-      ease: "power4.out",
-      skewY: 7,
-      stagger: {
-        amount: 1
-      },
-    }
-  })
-
-
+  // sc-fepj
   const fetlbox = gsap.timeline({
     scrollTrigger:{
-      trigger: ".sc-fe",
+      trigger: ".sc-fepj",
       start:"0% 100%",
       end:"100% 100%",
       scrub:1,
       ease: "power4.out",
-      skewY: 7,
       delay : 10,
       stagger: {
         amount: 1
       },
     }
   })
-  
-  
-  fetlbox.from('.sc-fe .list-cont .item_list', {
+  fetlbox.from('.sc-fepj .fepj-list .fepj-item', {
     width : 0,
     scrub:1,
     ease: "power4.out",
-    skewY: 7,
     stagger: {
       amount: 1
     },
     duration: 10
   })   
-
-
-
-
-
-
-
-  // sc-exp
-  const expBox = gsap.timeline({
-    scrollTrigger:{
-      trigger: ".sc-exp",
-      start:"0% 45%",
-      end:"100% 100%",
-      scrub:1,
-      ease: "power4.out",
-      skewY: 7,
-      stagger: {
-        amount: 1
-      },
-    }
-  })
-  expBox.to('.sc-exp', {
-    ease: "power4.out",
-    duration: 10,
-    autoAlpha: 1
-  })   
-
-
-
-  
-
-
-
-
-
-
-
-  //footer 
-  const footerTxt = new SplitType('footer .gtspan', { types: 'words, chars',});
-  gsap.from('footer .gtspan .gtspan .char', {
-    y: -100,
-    ease: "power4.out",
-    skewY: 7,
-    yPercent:-100,
-    stagger: {
-      amount: 1
-    }
-  })
-
-
-
-
-  
-
 
 
 
