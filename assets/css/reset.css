@@ -12,7 +12,8 @@ form, input {border: none;}
 
 
 body {
-  font-family: 'GrandSlang', 'Noto sans KR', sans-serif;
+  /* font-family: 'GrandSlang', 'Noto sans KR', sans-serif; */
+  font-family: "Kanit", 'Noto sans KR', sans-serif;
   background: #000;
   letter-spacing: -.02em;
   transition: background-color 0.3s;

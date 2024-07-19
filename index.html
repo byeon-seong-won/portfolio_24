@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/layout.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -18,12 +19,21 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    
     <div class="intro">
         <div class="guage-area">
             <div class="img-wrap">
             </div>
         </div>
     </div>
+    <header id="header">
+        <h1>
+            <a href="#">
+                <img src="./assets/img/ico-banner-01.png" alt="logo">
+                <span class="blind">로고</span>
+            </a>
+        </h1>
+    </header>
     <main id="main">
         <section class="sc-visual">
             <h2 class="blind">메인비주얼</h2>
@@ -76,92 +86,161 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="section-title">My Projects</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="section-wrap">
-           <div class="sticky-wrapper">
-                <div class="inner">
-                    <section class="section01 section">
-                        <img src="./assets/img/studiodragon.png" alt="">
-                        <div class="title">
-                            <h2 class="headline">STUDIO DRAGON</h2>
-                            <div class="sub-tit">
-                                <span class="sub-title">드라마 제작사 스튜디오드래곤 공식사이트를 리뉴얼하였으며 반응형으로 제작하였습니다.</span>
-                                <span>#GSAP #SCROLLTRIGGER #RESPONSIVE WEB</span>
-                                <a href="https://byeon-seong-won.github.io/studioDragon/" target="_blank">GO SITE</a>
-                                <a href="https://quilt-carpenter-2ad.notion.site/Studio-Dragon-ed928a1c624145cdbab7accf109d6b50" target="_blank">CODE REVIEW</a>
-                             </div>
+        <div class="section02-wrap" id="myfrj">
+            <div class="sticky-wrapper">
+                <div class="sticky">
+                    <div class="curtain-wrapper">
+                        <div class="bg-video">
+                            <video class="bg-video__content" autoplay muted loop>
+                                <source src="./assets/img/fevideo.mp4" type="video/mp4"/>
+                                Your browser is not supported!
+                            </video>
                         </div>
-                    </section>
-                    <section class="section02 section">
-                        <img src="./assets/img/guess__.png" alt="">
-                        <div class="title">
-                            <h2 class="headline">GUESS</h2>
-                            <div class="sub-tit">
-                                <span class="sub-title">웹 표준에 근거한 시멘틱 태그를 사용하여 탄탄한 짜임새의 마크업과, swiper에 중점을 둔 PC 버전의 적응형 웹사이트입니다.</span>
-                                <span>#CUSTOM SWIPER #ADAPTIVE WEB</span>
-                                <a href="https://byeon-seong-won.github.io/guess/" target="_blank">GO SITE</a>
-                                <a href="https://quilt-carpenter-2ad.notion.site/GUESS-0cd7fca528a844e79fbac0a72b2ca004" target="_blank">CODE REVIEW</a>
+                        <div class="fix-txt-wrapper">
+                            <div class="fix-txt">
+                                I can <span class="under">react-vue-html-css-scss-gsap-javascript</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                                <p>
+                                    <span class="under">My personal Projects</span> Here 
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </p>
                             </div>
                         </div>
-                   </section>
-                   <section class="section03 section">
-                        <img src="./assets/img/olive_pc.png" alt="">
-                        <div class="title">
-                            <h2 class="headline">OLIVE YOUNG</h2>
-                            <div class="sub-tit">
-                               <span class="sub-title">JSON 비동기 통신을 이용해 데이터를 바인딩해 클론코딩한 적응형 모바일 온라인 쇼핑몰입니다.</span>
-                               <span>#JSON #DATA BINDING #ADAPTIVE WEB</span>
-                               <a href="https://byeon-seong-won.github.io/olive_m/" target="_blank">GO SITE</a>
-                               <a href="https://quilt-carpenter-2ad.notion.site/OliveYoung-03f7a97a85544f77bc6b0750f9365005" target="_blank">CODE REVIEW</a>
+                    </div>
+                    <div class="inner">
+                        <section class="section01 section">
+                            <h2 class="blind">스튜디오드래곤</h2>
+                            <div class="img-area">
+                                <img src="./assets/img/studio-img.png" alt="스튜디오드래곤">
+                                <div class="desc">
+                                    <ul>
+                                        <li>Studio Dragon</li>
+                                        <li>
+                                            <span>#GSAP</span>
+                                            <span>#ScrollTrigger</span>
+                                            <span>#Responsive Web</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-link">
+                                        <a href="https://quilt-carpenter-2ad.notion.site/Studio-Dragon-ed928a1c624145cdbab7accf109d6b50" target="_blank">Code Review</a>
+                                        <a href="https://byeon-seong-won.github.io/studioDragon/" target="_blank">Go Site</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <section class="section04 section">
-                        <img src="./assets/img/olive_mo.png" alt="">
-                        <div class="title">
-                            <h2 class="headline">OLIVE YOUNG <span>(PC)</span></h2>
-                            <div class="sub-tit">
-                                <span class="sub-title">JSON 비동기 통신을 이용해 데이터를 바인딩해 클론코딩한 적응형 PC 온라인 쇼핑몰입니다.</span>
-                                <span>#JSON #DATA BINDING #ADAPTIVE WEB</span>
-                                <a href="https://byeon-seong-won.github.io/olive_pc/" target="_blank">GO SITE</a>
-                                <a href="https://quilt-carpenter-2ad.notion.site/OliveYoung-PC-39a6af62119f4e09bfdea4cb051976e4" target="_blank">CODE REVIEW</a>
-                             </div>
-                         </div>
-                    </section>
-                    <section class="section05 section">
-                        <img src="./assets/img/daejeon_.jpeg" alt="">
-                        <div class="title">
-                            <h2 class="headline">CITY HALL<span>&nbsp;(DAEJEON)</span></h2>
-                            <div class="sub-tit">
-                                <span class="sub-title">대전시청 공식사이트를 클론 코딩하였으며 웹 접근성과 시맨틱 마크업 구성에 중점을 둔 반응형 웹사이트입니다.</span>
-                                <span>#WEB ACCESSIBILITY #CUSTOM SWIPER #SEMANTIC #ADAPTIVE WEB</span>
-                                <a href="https://byeon-seong-won.github.io/cityhall/" target="_blank">GO SITE</a>
-                                <a href="https://quilt-carpenter-2ad.notion.site/0e211caba699461aae412dac729b3115" target="_blank">CODE REVIEW</a>
-                             </div>
-                         </div>
-                    </section>
-                    <section class="section06 section">
-                        <img src="./assets/img/naver_.jpg" alt="">
-                        <div class="title">
-                            <h2 class="headline">NAVER</h2>
-                            <div class="sub-tit">
-                                <span class="sub-title">네이버 공식사이트를 클론 코딩하였으며 웹 접근성과 시맨틱 마크업 구성에 중점을 둔 PC 버전의 적응형 웹사이트입니다.</span>
-                                <span>#WEB ACCESSIBILITY #SEMANTIC #IR/IS #ADAPTIVE WEB</span>
-                                <a href="https://byeon-seong-won.github.io/naver/" target="_blank">GO SITE</a>
-                                <a href="https://quilt-carpenter-2ad.notion.site/NAVER-79feedf6a1fe485babe8d6f8e4d22ce2" target="_blank">CODE REVIEW</a>
-                             </div>
-                         </div>
-                    </section>
+                        </section>
+                        <section class="section02 section">
+                            <h2 class="blind">게스</h2>
+                            <div class="img-area">
+                                <img src="./assets/img/guess-img.png" alt="게스">
+                                <div class="desc">
+                                    <ul>
+                                        <li>Guess</li>
+                                        <li>
+                                            <span>#Custom Swiper</span>
+                                            <span>#Adaptive Web</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-link">
+                                        <a href="https://quilt-carpenter-2ad.notion.site/GUESS-0cd7fca528a844e79fbac0a72b2ca004" target="_blank">Code Review</a>
+                                        <a href="https://byeon-seong-won.github.io/guess/" target="_blank">Go Site</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section04 section">
+                            <h2 class="blind">올리브영 모바일</h2>
+                            <div class="img-area">
+                                <img src="./assets/img/olive-mo.png" alt="올리브영 모바일">
+                                <div class="desc">
+                                    <ul>
+                                        <li>Olive Young</li>
+                                        <li>
+                                            <span>#Json</span>
+                                            <span>#Data Binding</span>
+                                            <span>#Adaptive Web</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-link">
+                                        <a href="https://quilt-carpenter-2ad.notion.site/OliveYoung-03f7a97a85544f77bc6b0750f9365005" target="_blank">Code Review</a>
+                                        <a href="https://byeon-seong-won.github.io/olive_m/" target="_blank">Go Site</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section03 section">
+                            <h2 class="blind">올리브영 pc</h2>
+                            <div class="img-area">
+                                <img src="./assets/img/olive-pc.png" alt="올리브영 pc">
+                                <div class="desc">
+                                    <ul>
+                                        <li>Olive Young (pc)</li>
+                                        <li>
+                                            <span>#Json</span>
+                                            <span>#Data Binding</span>
+                                            <span>#Adaptive Web</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-link">
+                                        <a href="https://quilt-carpenter-2ad.notion.site/OliveYoung-PC-39a6af62119f4e09bfdea4cb051976e4" target="_blank">Code Review</a>
+                                        <a href="https://byeon-seong-won.github.io/olive_pc/" target="_blank">Go Site</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section05 section">
+                            <h2 class="blind">대전시청</h2>
+                            <div class="img-area">
+                                <img src="./assets/img/cityhall-img.png" alt="대전시청">
+                                <div class="desc">
+                                    <ul>
+                                        <li>City Hall (daejeon)</li>
+                                        <li>
+                                            <span>#Web Accessibility</span>
+                                            <span>#Custom Swiper</span>
+                                            <span>#Semantic</span>
+                                            <span>#Responsive</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-link">
+                                        <a href="https://quilt-carpenter-2ad.notion.site/0e211caba699461aae412dac729b3115" target="_blank">Code Review</a>
+                                        <a href="https://byeon-seong-won.github.io/cityhall/" target="_blank">Go Site</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section06 section">
+                            <h2 class="blind">네이버</h2>
+                            <div class="img-area">
+                                <img src="./assets/img/naver-img.png" alt="네이버">
+                                <div class="desc">
+                                    <ul>
+                                        <li>Naver</li>
+                                        <li>
+                                            <span>#Web Accessibility</span>
+                                            <span>#IR/IS</span>
+                                            <span>#Semantic</span>
+                                            <span>#Adaptive Web</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-link">
+                                        <a href="https://quilt-carpenter-2ad.notion.site/NAVER-79feedf6a1fe485babe8d6f8e4d22ce2" target="_blank">Code Review</a>
+                                        <a href="https://byeon-seong-won.github.io/naver/" target="_blank">Go Site</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-           </div>
+            </div>
         </div>
+        
         <section class="sc-intro-2 sc-intro"> 
-            <h2 class="blind">My FRONTEND 인트로</h2>
+            <h2 class="blind">My Works 인트로</h2>
             <div class="sticky-wrapper">
                 <div class="sticky">
                     <div class="inner">
@@ -175,190 +254,156 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="section-title">My <br>Front-end Projects</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- banner -->
-        <section class="sc-banner">
-            <h2 class="blind">배너 영역</h2>
-            <div class="banner line-1">
-                <div class="banner-line slide">
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-01.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-02.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-03.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-04.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="banner line-2">
-                <div class="banner-line slide">
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-05.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-06.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-07.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                    <div>
-                        <span>MY FRONTEND</span>
-                        <span>PROJECT_REACT-VUE</span>
-                        <span class="hero-picto ico-banner">
-                            <span class="picto-inner">
-                                <img src="./assets/img/ico-banner-08.png" alt="picto" loading="lazy" class="ico-smile">
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+        <!-- myworks -->
+        <section class="sc-work" id="myworks">
+            <h2 class="blind">My Works</h2>
+            <p class="title">My Featured Works</p>
+            <ul class="work-list">
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/d4fa4527ee96449086280f296b0982d7" target="_blank">
+                        <div class="info-area">
+                            <p>EVERYCLICK</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>LANDING PAGE</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/every-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/every-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/every-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/JamongLab-63bc5096cd3a43e1947c524663b4a37e" target="_blank">
+                        <div class="info-area">
+                            <p>JAMONGLAB</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>HOMEPAGE</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/jamong-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/jamong-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/jamong-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/868d33c6cbb843bdaa732de07542597e" target="_blank">
+                        <div class="info-area">
+                            <p>ERUNDG</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>HOMEPAGE</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/erundg-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/erundg-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/erundg-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/8f70abc950ee4bf4b84eadf59c56f317" target="_blank">
+                        <div class="info-area">
+                            <p>THE ZOOOM KOREA</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>HOMEPAGE</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/thzk-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/thzk-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/thzk-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/fb7c7d2ac9dc4049af16fef3de71e1fe" target="_blank">
+                        <div class="info-area">
+                            <p>XARVIS</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>LANDING PAGE</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/xarvis-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/xarvis-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/xarvis-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/1141d970a4a948c6aed59c065b24fa20" target="_blank">
+                        <div class="info-area">
+                            <p>THE ZOOOM PLUS</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>MOBILE APP</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/thzp-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/thzp-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/thzp-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/ver_01-1f9ca22e87b34628bcd4514021419247" target="_blank">
+                        <div class="info-area">
+                            <p>DREAM PASS ver.01</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>MOBILE APP</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/dpass01-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/dpass01-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/dpass01-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/ver_02-670bad8df8a64d0d90c1feea52c08bef" target="_blank">
+                        <div class="info-area">
+                            <p>DREAM PASS ver.02</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>MOBILE APP</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/dpass02-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/dpass02-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/dpass02-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="work-item">
+                    <a href="https://quilt-carpenter-2ad.notion.site/77bcda4c595e45958328094a85e2cc44" target="_blank">
+                        <div class="info-area">
+                            <p>QUIZCLICK</p>
+                        </div>
+                        <div class="thumb-area">
+                            <p>MOBILE APP</p>
+                            <ul class="hover">
+                                <li><img src="./assets/img/qclick-01.jpg" alt=""></li>
+                                <li><img src="./assets/img/qclick-02.jpg" alt=""></li>
+                                <li><img src="./assets/img/qclick-03.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </section>
-        <section class="sc-fropj">
-            <h2 class="blind">My frontend 프로젝트</h2>
-            <div>
-                <div class="swiper fropj-slide">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="thumb-area">
-                                <video class="bg-video__content" autoplay muted loop>
-                                    <source src="./assets/img/mypageReco.webm" type="video/mp4">
-                                    <source src="./assets/img/mypageReco.webm" type="video/webm">
-                                    <img src="./assets/img/mypage.png" alt="">
-                                </video>
-                            </div>
-                            <div class="info-area">
-                                <div>
-                                    <img src="./assets/img/react.png" alt="">
-                                    <h3>React를 활용한 마이페이지 SPA </h3>
-                                </div>
-                                <ul>
-                                    <li>#100% 개인작업</li>
-                                    <li>#React</li>
-                                    <li>#Redux-toolkit</li>
-                                    <li>#Styled-component</li>
-                                    <li>#Javascript</li>
-                                    <li>#CRUD</li>
-                                    <li>#All Devices</li>
-                                </ul>
-                                <div class="btn-link">
-                                    <a href="https://github.com/byeon-seong-won/react_mypage_study" target="_blank">GITHUB</a>
-                                    <a href="https://byeon-seong-won.github.io/mypage/" target="_blank">GO SITE</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="thumb-area">
-                                <video class="bg-video__content" autoplay muted loop>
-                                    <source src="./assets/img/shopReco.webm" type="video/mp4">
-                                    <source src="./assets/img/shopReco.webm" type="video/webm">
-                                    <img src="./assets/img/myblog.png" alt="">
-                                </video>
-                            </div>
-                            <div class="info-area">
-                                <div>
-                                    <img src="./assets/img/react.png" alt="">
-                                    <h3>React를 활용한 쇼핑몰 SPA </h3>
-                                </div>
-                                <ul>
-                                    <li>#100% 개인작업</li>
-                                    <li>#React</li>
-                                    <li>#Redux-toolkit</li>
-                                    <li>#Styled-component</li>
-                                    <li>#Javascript</li>
-                                    <li>#All Devices</li>
-                                </ul>
-                                <div class="btn-link">
-                                    <a href="https://github.com/byeon-seong-won/react.js_shopmall_project" target="_blank">GITHUB</a>
-                                    <a href="https://byeon-seong-won.github.io/" target="_blank">GO SITE</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="thumb-area">
-                                <video class="bg-video__content" autoplay muted loop>
-                                    <source src="./assets/img/blogReco.webm" type="video/mp4">
-                                    <source src="./assets/img/blogReco.webm" type="video/webm">
-                                    <img src="./assets/img/shopmall.png" alt="">
-                                </video>
-                            </div>
-                            <div class="info-area">
-                                <div>
-                                    <img src="./assets/img/vue.png" alt="">
-                                    <h3>Vue를 활용한 블로그 SPA </h3>
-                                </div>
-                                <ul>
-                                    <li>#100% 개인작업</li>
-                                    <li>#Vue</li>
-                                    <li>#Javascript</li>
-                                    <li>#CRUD</li>
-                                    <li>#All Devices</li>
-                                </ul>
-                                <div class="btn-link">
-                                    <a href="https://github.com/byeon-seong-won/vue.js_blog_project" target="_blank">GITHUB</a>
-                                    <a href="https://byeon-seong-won.github.io/vueblog/" target="_blank">GO SITE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="navi-prev navi"></button>
-                    <button class="navi-next navi"></button>
-                </div>
-            </div>
-        </section>
+
         <section class="sc-intro-3 sc-intro"> 
-            <h2 class="blind">My Works 인트로</h2>
+            <h2 class="blind">My FRONTEND 인트로</h2>
             <div class="sticky-wrapper">
                 <div class="sticky">
                     <div class="inner">
@@ -372,98 +417,316 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="section-title">My Works</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- banner -->
+        <section class="sc-banner">
+            <div class="banner-cont">
+                <h2 class="blind">배너 영역</h2>
+                <div class="banner line-1">
+                    <div class="banner-line slide">
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-01.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-02.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-03.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-04.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-01.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-02.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-03.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-04.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner line-2">
+                    <div class="banner-line slide">
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-05.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-06.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-07.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-08.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-05.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-06.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-07.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>MY FRONTEND</span>
+                            <span>PROJECT_REACT-VUE</span>
+                            <span class="hero-picto ico-banner">
+                                <span class="picto-inner">
+                                    <img src="./assets/img/ico-banner-08.png" alt="아이콘" loading="lazy" class="ico-smile">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gtspan-cont">
+                <span class="gtspan">MY FRONT-END REACT/VUE <br>
+                    PERSONAL PROJECTS HERE.</span>
+            </div>
+        </section>
 
-        <section class="sc-work">
-            <h2 class="blind">My Works</h2>
-            <ul id="list_ul" class="work-list">
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/d4fa4527ee96449086280f296b0982d7" target="_blank">
-                        <div class="txt">
-                            <p>EVERYCLICK</p>
+        <!-- my frontend -->
+        <section class="sc-fe">
+            <h2 class="blind">my frontend projects</h2>
+            <!-- <div class="gtspan-wrapper">
+                <span class="gtspan">I WANT TO BE A CREATIVE UI-DEVELOPER&PUBLISHIER</span><br>
+            </div> -->
+            <ul class="list-cont">
+                <li class="item_list">
+                    <div class="item_cont">
+                        <div class="thumb-area">
+                            <img src="./assets/img/mypage-img.jpg" alt="" class="ori-img">
+                            <img src="./assets/img/mypage-img-hv.png" alt="" class="hv-img">
                         </div>
-                        <div class="div_wrap"><img src="./assets/img/every.png" alt="에브리클릭"></div>
-                    </a>
+                        <div class="info-area">
+                            <p>MyPage SPA using React</p>
+                            <ul class="desc-list">
+                                <li class="desc-item">#100% 개인작업</li>
+                                <li class="desc-item">#React</li>
+                                <li class="desc-item">#Redux-toolkit</li>
+                                <li class="desc-item">#Styled-component</li>
+                                <li class="desc-item">#Javascript</li>
+                                <li class="desc-item">#CRUD</li>
+                                <li class="desc-item">#All Devices</li>
+                            </ul>
+                            <div class="btn-link">
+                                <a href="https://byeon-seong-won.github.io/mypage/" target="_blank">Go Site</a>
+                                <a href="https://github.com/byeon-seong-won/react_mypage_study" target="_blank">Github</a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/JamongLab-63bc5096cd3a43e1947c524663b4a37e" target="_blank">
-                        <div class="txt">
-                            <p>JAMONGLAB</p>
+                <li class="item_list">
+                    <div class="item_cont">
+                        <div class="thumb-area">
+                            <img src="./assets/img/myshop-img.jpg" alt="" class="ori-img">
+                            <img src="./assets/img/myshop-img-hv.png" alt="" class="hv-img">
                         </div>
-                    </a>
-                  <div class="div_wrap"><img src="./assets/img/jamong.png" alt="자몽랩"></div>
+                        <div class="info-area">
+                            <p>Shopping mall SPA using React</p>
+                            <ul class="desc-list">
+                                <li class="desc-item">#100% 개인작업</li>
+                                <li class="desc-item">#React</li>
+                                <li class="desc-item">#Redux-toolkit</li>
+                                <li class="desc-item">#Styled-component</li>
+                                <li class="desc-item">#Javascript</li>
+                                <li class="desc-item">#All Devices</li>
+                            </ul>
+                            <div class="btn-link">
+                                <a href="https://byeon-seong-won.github.io/" target="_blank">Go Site</a>
+                                <a href="https://github.com/byeon-seong-won/react.js_shopmall_project" target="_blank">Github</a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/fb7c7d2ac9dc4049af16fef3de71e1fe" target="_blank">
-                        <div class="txt">
-                            <p>XARVIS</p>
+                <li class="item_list">
+                    <div class="item_cont">
+                        <div class="thumb-area">
+                            <img src="./assets/img/myblog-img.jpg" alt="" class="ori-img">
+                            <img src="./assets/img/myblog-img-hv.png" alt="" class="hv-img">
                         </div>
-                        <div class="div_wrap"><img src="./assets/img/xarvis.png" alt="돈버는미션"></div>
-                    </a>
-                  </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/868d33c6cbb843bdaa732de07542597e" target="_blank">
-                        <div class="txt">
-                            <p>ERUNDG</p>
+                        <div class="info-area">
+                            <p>Blog SPA using Vue</p>
+                            <ul class="desc-list">
+                                <li class="desc-item">#100% 개인작업</li>
+                                <li class="desc-item">#Vue</li>
+                                <li class="desc-item">#Javascript</li>
+                                <li class="desc-item">#CRUD</li>
+                                <li class="desc-item">#All Devices</li>
+                            </ul>
+                            <div class="btn-link">
+                                <a href="https://byeon-seong-won.github.io/vueblog/" target="_blank">Go Site</a>
+                                <a href="https://github.com/byeon-seong-won/vue.js_blog_project" target="_blank">Github</a>
+                            </div>
                         </div>
-                        <div class="div_wrap"><img src="./assets/img/erundg.png" alt="이런등기"></div>
-                    </a>
+                    </div>
                 </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/8f70abc950ee4bf4b84eadf59c56f317" target="_blank">
-                        <div class="txt">
-                            <p>THE ZOOOM KOREA</p>
+            </ul>
+        </section>
+        
+        <!-- my expe -->
+        <section class="sc-exp">
+            <h2 class="blind">경력</h2>
+            <p class="title">Experience</p>
+            <ul>
+                <li>
+                    <div class="thumb-area">
+                        <img src="./assets/img/edu.jpg" alt="">
+                    </div>
+                    <div class="info-area">
+                        <p>한국폴리텍대학 분당융합기술교육원</p>
+                        <div>
+                            <span>Java based Full stack Curriculum</span>
+                            <span>2021 ~ 2021</span>
                         </div>
-                        <div class="div_wrap"><img src="./assets/img/thzk.png" alt="더줌코리아"></div>
-                    </a>
+                    </div>
                 </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/1141d970a4a948c6aed59c065b24fa20" target="_blank">
-                        <div class="txt">
-                            <p>THE ZOOOM PLUS</p>
+                <li>
+                    <div class="thumb-area">
+                        <img src="./assets/img/oracle.jpeg" alt="">
+                    </div>
+                    <div class="info-area">
+                        <p>유클릭</p>
+                        <div>
+                            <span>Oracle Database Engineer</span>
+                            <span>2021 ~ 2022</span>
                         </div>
-                        <div class="div_wrap"><img src="./assets/img/thzp.png" alt="더줌플러스"></div>
-                    </a>
+                    </div>
                 </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/ver_01-1f9ca22e87b34628bcd4514021419247" target="_blank">
-                        <div class="txt">
-                            <p>DREAM PASS ver.01</p>
+                <li>
+                    <div class="thumb-area">
+                        <img src="./assets/img/work.jpg" alt="">
+                    </div>
+                    <div class="info-area">
+                        <p>더줌코리아</p>
+                        <div>
+                            <span>Publisher</span>
+                            <span>2023 ~ 2024</span>
                         </div>
-                        <div class="div_wrap"><img src="./assets/img/dpass01.png" alt="드림패스"></div>
-                    </a>
-                </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/ver_02-670bad8df8a64d0d90c1feea52c08bef" target="_blank">
-                        <div class="txt">
-                            <p>DREAM PASS ver.02</p>
-                        </div>
-                        <div class="div_wrap"><img src="./assets/img/dpass02.png" alt="드림패스"></div>
-                    </a>
-                </li>
-                <li class="list_li">
-                    <a href="https://quilt-carpenter-2ad.notion.site/77bcda4c595e45958328094a85e2cc44" target="_blank">
-                        <div class="txt">
-                            <p>QUIZCLICK</p>
-                        </div>
-                        <div class="div_wrap"><img src="./assets/img/qclick.png" alt="퀴즈클릭"></div>
-                    </a>
+                    </div>
                 </li>
             </ul>
         </section>
     </main>
+
     <footer id="footer">
-        <h3>THANK YOU FOR WATCHING!</h3>
-        <small>© 2023. Seong won Byeon All Rights Reserved.</small>
+        <h3 class="gtspan">CONTACT</h3>
+        <address>
+            <a href="mailto:sssingw@naver.com" class="addr">
+                <span class="material-symbols-outlined">
+                forward_to_inbox
+                </span>sssingw@naver.com</a>
+            <span class="addr">
+                <span class="material-symbols-outlined">
+                phone_iphone
+                </span>010-9859-7131
+            </span>
+        </address>
         <div class="btn-link">
             <a href="https://www.notion.so/7dc6ad78fc2045538858dbd04ecb5b5f" class="notion" target="_blank">NOTION</a>
             <a href="https://github.com/byeon-seong-won" class="git" target="_blank">GITHUB</a>
         </div>
+        <small>&copy; 2024. seong won Byeon All Rights Reserved.</small>
     </footer>
 </body>
 </html>

@@ -1,7 +1,19 @@
 $(function() {
 
 
-    // --------------- 전체 부드러운 스크롤 --------------- 
+
+
+  // $('.img-area').mousemove(function(e) {
+  //   const pointerHeight = $('.pointer').height();
+  //               const mouseY = e.offsetY - (pointerHeight / 2);
+  //               $('.pointer').css("top", mouseY + "px");
+  // });
+  
+
+
+  
+  
+  // --------------- 전체 부드러운 스크롤 --------------- 
     const lenis = new Lenis()
     lenis.on('scroll', (e) => {
     })
@@ -15,7 +27,7 @@ $(function() {
 
 
   // --------------- 인트로 --------------- 
- for (let i = 1; i < 16; i++) {
+  for (let i = 1; i < 16; i++) {
     firstClass=(i==1)?'on':'';
     $('.img-wrap').prepend(`<img src="./assets/img/ico-intro-${i}.png" alt="" class="${firstClass}">`)  
   }
@@ -33,7 +45,6 @@ $(function() {
     }
   }
 
-  
   const introMotion = gsap.timeline({
     onComplete:function(){
       $('.intro').remove();
@@ -44,6 +55,7 @@ $(function() {
   .to('.guage-area',{width : '100vw', height: '100vh', 'border-radius' : '0'}, 'display+=3')
   .set('.guage-area img',{autoAlpha :0}, 'display+=3')
   .to('.intro',{autoAlpha:0}, 'display-main')
+  .to('header',{autoAlpha:1}, 'display-main')
   .from(".sc-visual .hero-line span", 1.8, {
       y: 100,
       ease: "power4.out",
@@ -76,6 +88,9 @@ $(function() {
   })
 
   mainTxt
+  .set('body',{
+    'background-color' : '#000',
+  },'mainTxt')
   .to('.sc-visual .main-cont',{
     scale:0.4,
   },'mainTxt')
@@ -99,17 +114,10 @@ $(function() {
     scale:0.4,
     'color' : '#000'
   },'mainTxt')
-  
-  .to('.sc-visual .hero-line-5',{
-    'transform': 'translateY(-60vh)',
-    autoAlpha: 1,
-    scale : 5,
-    'font-weight' : 'bold'
-  },'mainTxt')
   .to('.sc-visual .hero-line-5',{
     'transform': 'translateY(-50vh)',
-    autoAlpha: 0,
-    scale : 0,
+    autoAlpha: 1,
+    scale : 1,
   })
 
 
@@ -123,7 +131,7 @@ $(function() {
   const count_01 = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-intro-1",
-      start:"20% 70%",
+      start:"20% 50%",
       end:"100% 100%",
       scrub:1,
       ease: "power4.out",
@@ -134,10 +142,9 @@ $(function() {
     }
   })
   count_01
-  .to('.sc-visual .main-cont', {
-    autoAlpha: 0,
-    ease: 'none',
-  }, 'count_01')
+  .to('.sc-visual .main-cont',{
+    autoAlpha: 0
+  },'count_01')
   .to('.sc-intro-1 .intro-cont .prev',1, { 
     y:'-100%',
     ease:'none'
@@ -156,232 +163,321 @@ $(function() {
 
 
 
-// --------------- projects --------------- 
-const myprj = gsap.timeline({
-  scrollTrigger:{
-    trigger:'.section-wrap .sticky-wrapper',
-    start:"0% 0%",
-    end:"100% 100%",
-    scrub:1,
-    ease: "power4.out",
-    skewY: 7,
-    stagger: {
-      amount: 1
+  // --------------- projects --------------- 
+  const froprj = gsap.timeline({
+    scrollTrigger:{
+      trigger:'.section02-wrap .sticky-wrapper',
+      start:"0% 0%",
+      end:"100% 100%",
+      scrub:1,
+      ease: "slow(0.1,0.1,false)",
+      skewY: 7,
+      stagger: {
+        amount: 1
+      },
     },
-  },
-})
+  })
 
-myprj
-// section 01
-  .set('.section-wrap section:nth-child(1)', {
+  froprj
+  // section 01
+  .to('.section02-wrap .sticky-wrapper .fix-txt-wrapper', {
+    width: '100vw',
+    height: '100vh',
+    ease: "none",
+    delay:500,
+    duration: 1500,
+  }, 'froprj01-start')
+  .to('.section02-wrap .sticky-wrapper .fix-txt', {
     autoAlpha: 1,
-    duration: 10,
+    ease: "none",
+    duration: 1500,
+  }, 'froprj01-start')
+  .set('.section02-wrap section:nth-child(1)', {
+    autoAlpha: 1,
     ease: "none",
     'z-index' : '100',
-  }, 'sect01-start')
-  .to('body', {
-    'background-color' : '#0a0255',
-    duration: 1,
-    ease: "none",
-  }, 'sect01-start')
-  .to('.section-wrap section:nth-child(1) img', { 
-    opacity: 1, 
+    delay:1000,
+    duration: 1500,
+  }, 'froprj01-start')
+  .set('.section02-wrap section:nth-child(1) .img-area', { 
+    autoAlpha: 1,
+    scale : 0.5,
+    duration: 1500,
+  }, 'froprj01-cont')
+  .to('.section02-wrap section:nth-child(1) .img-area', { 
+    scale: 1,
+    bottom: '10vh',
     ease: 'none', 
-    duration: 5,
-  }, 'sect01-cont')
-  .to('.section-wrap section:nth-child(1) .title', {
-    y: '35vh',
-    ease: 'none',
-    opacity: 5, 
-    duration: 50,
-  }, 'sect01-cont+=10')
-  .to('.section-wrap section:nth-child(1)', {
+    duration: 1500,
+  }, 'froprj01-cont')
+  .to('.section02-wrap section:nth-child(1) .img-area img', { 
+    width: '100%',
+    height: 'calc(100vh - 20vh)',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj01-cont')
+  .to('.section02-wrap section:nth-child(1) .img-area', { 
+    bottom: '100vh',
+    scale : 0.5,
+    autoAlpha: 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj01-cont-end')
+  .to('.section02-wrap section:nth-child(1) .img-area img', { 
+    scale : 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj01-cont-end')
+  .to('.section02-wrap section:nth-child(1)', {
     autoAlpha: 0,
     ease: "none",
-    duration: 70,
+    duration: 1500,
   }, "+=10")
+
 
   // section 02
-  .set('.section-wrap section:nth-child(2)', {
+  .set('.section02-wrap section:nth-child(2)', {
     autoAlpha: 1,
     ease: "none",
-    duration: 1,
     'z-index' : '100',
-  }, 'sect02-start')
-  .to('body', {
-    // 'background-color' : '#217790',
-    'background-color' : '#e00011',
-    // 'background-color' : '#9b262e',
-    duration: 1,
-    ease: "none",
-  }, 'sect02-start')
-  .to('.section-wrap section:nth-child(2) img', { 
-    height: '100vh',
-     opacity: 1, 
-     ease: 'none' ,
-     duration: 5,
-  }, 'sect02-sub')
-  .to('.section-wrap section:nth-child(2) .title', {
-    y: '35vh',
-    ease: 'none',
-    opacity: 1, 
-    duration: 50,
-  }, 'sect02-sub+=10')
-  .to('.section-wrap section:nth-child(2)', {
+    delay:1000,
+    duration: 1500,
+  }, 'froprj02-start')
+  .set('.section02-wrap section:nth-child(2) .img-area', { 
+    autoAlpha: 1,
+    scale : 0.5,
+    duration: 1500,
+  }, 'froprj02-cont')
+  .to('.section02-wrap section:nth-child(2) .img-area', { 
+    scale: 1,
+    bottom: '10vh',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj02-cont')
+  .to('.section02-wrap section:nth-child(2) .img-area img', { 
+    width: '100%',
+    height: 'calc(100vh - 20vh)',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj02-cont')
+  .to('.section02-wrap section:nth-child(2) .img-area', { 
+    bottom: '100vh',
+    scale : 0.5,
+    autoAlpha: 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj02-cont-end')
+  .to('.section02-wrap section:nth-child(2) .img-area img', { 
+    scale : 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj02-cont-end')
+  .to('.section02-wrap section:nth-child(2)', {
     autoAlpha: 0,
     ease: "none",
-    duration: 70,
+    duration: 1500,
   }, "+=10")
+
+
 
   // section 03
-  .set('.section-wrap section:nth-child(3)', {
+  .set('.section02-wrap section:nth-child(3)', {
     autoAlpha: 1,
     ease: "none",
-    duration: 1,
     'z-index' : '100',
-  }, 'sect03-start')
-  .to('body', {
-    // 'background-color' : '#9b262e',
-    'background-color' : '#82dc28',
-    duration: 1,
-    ease: "none",
-  }, 'sect03-start')
-  .to('.section-wrap section:nth-child(3) img', { 
-    height: '100vh',
-     opacity: 1,
-      ease: 'none',
-      duration: 5, 
-  }, 'sect03-sub')
-  .to('.section-wrap section:nth-child(3) .title', {
-    y: '35vh',
-    ease: 'none',
-    opacity: 1, 
-    duration: 50,
-  }, 'sect03-sub+=10')
-  .to('.section-wrap section:nth-child(3)', {
+    delay:1000,
+    duration: 1500,
+  }, 'froprj03-start')
+  .set('.section02-wrap section:nth-child(3) .img-area', { 
+    autoAlpha: 1,
+    scale : 0.5,
+    duration: 1500,
+  }, 'froprj03-cont')
+  .to('.section02-wrap section:nth-child(3) .img-area', { 
+    scale: 1,
+    bottom: '10vh',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj03-cont')
+  .to('.section02-wrap section:nth-child(3) .img-area img', { 
+    width: '100%',
+    height: 'calc(100vh - 20vh)',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj03-cont')
+  .to('.section02-wrap section:nth-child(3) .img-area', { 
+    bottom: '100vh',
+    scale : 0.5,
+    autoAlpha: 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj03-cont-end')
+  .to('.section02-wrap section:nth-child(3) .img-area img', { 
+    scale : 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj03-cont-end')
+  .to('.section02-wrap section:nth-child(3)', {
     autoAlpha: 0,
     ease: "none",
-    duration: 70,
+    duration: 1500,
   }, "+=10")
 
-  // section 04
-  .set('.section-wrap section:nth-child(4)', {
+
+
+   // section 04
+  .set('.section02-wrap section:nth-child(4)', {
     autoAlpha: 1,
     ease: "none",
-    duration: 1,
     'z-index' : '100',
-  }, 'sect04-start')
-  .to('body', {
-    'background-color' : '#ff4b67',
-    // 'background-color' : '#064e64',
-    duration: 1,
-    ease: "none",
-  }, 'sect04-start')
-  .to('.section-wrap section:nth-child(4) img', { 
-    height: '100vh', 
-    opacity: 1, 
-    ease: 'none' ,
-    duration: 5,
-  }, 'sect04-sub')
-  .to('.section-wrap section:nth-child(4) .title', {
-    y: '35vh',
-    ease: 'none',
-    opacity: 1, 
-    duration: 50,
-  }, 'sect04-sub+=10')
-  .to('.section-wrap section:nth-child(4)', {
+    delay:1000,
+    duration: 1500,
+  }, 'froprj04-start')
+  .set('.section02-wrap section:nth-child(4) .img-area', { 
+    autoAlpha: 1,
+    scale : 0.5,
+    duration: 1500,
+  }, 'froprj04-cont')
+  .to('.section02-wrap section:nth-child(4) .img-area', { 
+    scale: 1,
+    bottom: '10vh',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj04-cont')
+  .to('.section02-wrap section:nth-child(4) .img-area img', { 
+    width: '100%',
+    height: 'calc(100vh - 20vh)',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj04-cont')
+  .to('.section02-wrap section:nth-child(4) .img-area', { 
+    bottom: '100vh',
+    scale : 0.5,
+    autoAlpha: 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj04-cont-end')
+  .to('.section02-wrap section:nth-child(4) .img-area img', { 
+    scale : 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj04-cont-end')
+  .to('.section02-wrap section:nth-child(4)', {
     autoAlpha: 0,
     ease: "none",
-    duration: 70,
+    duration: 1500,
   }, "+=10")
+
 
   // section 05
-  .set('.section-wrap section:nth-child(5)', {
+  .set('.section02-wrap section:nth-child(5)', {
     autoAlpha: 1,
     ease: "none",
-    duration: 1,
     'z-index' : '100',
-  }, 'sect05-start')
-  .to('body', {
-    // 'background-color' : '#09182b',
-    // 'background-color' : '#9fc1da',
-    'background-color' : '#e3bd5a',
-    duration: 1,
-    ease: "none",
-  }, 'sect05-start')
-  .to('.section-wrap section:nth-child(5) img', { 
-    height: '100vh', 
-    opacity: 1, 
-    ease: 'none' ,
-    duration: 5,
-  }, 'sect05-sub')
-  .to('.section-wrap section:nth-child(5) .title', {
-    y: '35vh',
-    ease: 'none',
-    opacity: 1, 
-    duration: 50,
-  }, 'sect05-sub+=10')
-  .to('.section-wrap section:nth-child(5)', {
+    delay:1000,
+    duration: 1500,
+  }, 'froprj05-start')
+  .set('.section02-wrap section:nth-child(5) .img-area', { 
+    autoAlpha: 1,
+    scale : 0.5,
+    duration: 1500,
+  }, 'froprj05-cont')
+  .to('.section02-wrap section:nth-child(5) .img-area', { 
+    scale: 1,
+    bottom: '10vh',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj05-cont')
+  .to('.section02-wrap section:nth-child(5) .img-area img', { 
+    width: '100%',
+    height: 'calc(100vh - 20vh)',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj05-cont')
+  .to('.section02-wrap section:nth-child(5) .img-area', { 
+    bottom: '100vh',
+    scale : 0.5,
+    autoAlpha: 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj05-cont-end')
+  .to('.section02-wrap section:nth-child(5) .img-area img', { 
+    scale : 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj05-cont-end')
+  .to('.section02-wrap section:nth-child(5)', {
     autoAlpha: 0,
     ease: "none",
-    duration: 70,
+    duration: 1500,
   }, "+=10")
+
+
 
   // section 06
-  .set('.section-wrap section:nth-child(6)', {
+  .set('.section02-wrap section:nth-child(6)', {
     autoAlpha: 1,
     ease: "none",
-    duration: 1,
     'z-index' : '100',
-  }, 'sect06-start')
-  .to('body', {
-    // 'background-color' : '#01c73c',
-    'background-color' : '#16a340',
-    duration: 1,
-    ease: "none",
-  }, 'sect06-start')
-  .to('.section-wrap section:nth-child(6) img', { 
-    height: '100vh', 
-    opacity: 1, 
-    ease: 'none',
-    duration: 5, 
-  }, 'sect06-sub')
-  .to('.section-wrap section:nth-child(6) .title', {
-    y: '35vh',
-    ease: 'none',
-    opacity: 1, 
-    duration: 50,
-  }, 'sect06-sub+=10')
-  .to('.section-wrap section:nth-child(6)', {
+    delay:1000,
+    duration: 1500,
+  }, 'froprj06-start')
+  .set('.section02-wrap section:nth-child(6) .img-area', { 
+    autoAlpha: 1,
+    scale : 0.5,
+    duration: 1500,
+  }, 'froprj06-cont')
+  .to('.section02-wrap section:nth-child(6) .img-area', { 
+    scale: 1,
+    bottom: '10vh',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj06-cont')
+  .to('.section02-wrap section:nth-child(6) .img-area img', { 
+    width: '100%',
+    height: 'calc(100vh - 20vh)',
+    ease: 'none', 
+    duration: 1500,
+  }, 'froprj06-cont')
+  .to('.section02-wrap section:nth-child(6) .img-area', { 
+    bottom: '100vh',
+    scale : 0.5,
+    autoAlpha: 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj06-cont-end')
+  .to('.section02-wrap section:nth-child(6) .img-area img', { 
+    scale : 1,
+    ease: 'none', 
+    delay:3000,
+    duration: 1500,
+  },'froprj01-cont-end')
+  .to('.section02-wrap section:nth-child(6)', {
     autoAlpha: 0,
     ease: "none",
-    duration: 70,
+    duration: 1500,
   }, "+=10")
-  .to('body', {
-    'background-color' : '#000',
-    duration: 1,
+  .to('.section02-wrap .curtain-wrapper', {
+    autoAlpha: 0,
     ease: "none",
-  },)
-
-
-
-  // $('.sub-tit a').hover(function() {
-  //   var Idx = $(this).closest('.section').index() + 1; 
-  //   console.log("Idx" + Idx)
-  //   $('body').addClass('hover' + Idx);
-  // }, function() {
-  //   var Idx = $(this).closest('.section').index() + 1;  
-  //   $('body').removeClass('hover' + Idx);
-  // });
-
-
-
-
-
-
-
-
-
+    delay:500,
+    duration: 1500,
+  })
+  .to('body', {
+    'background-color' : '#fff',
+    ease: "none",
+  })
 
 
 
@@ -395,7 +491,7 @@ myprj
   const count_02 = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-intro-2",
-      start:"0% 70%",
+      start:"20% 50%",
       end:"100% 100%",
       scrub:1,
       ease: "power4.out",
@@ -408,100 +504,60 @@ myprj
   count_02
   .to('.sc-intro-2 .intro-cont .prev',1, { 
     y:'-100%',
-    ease:'none'
+    ease:'none',
+    color : '#000'
   },'count_02')
   .to('.sc-intro-2 .intro-cont .curr',1, { 
     y:'-100%',
-    ease:'none'
+    ease:'none',
+        color : '#000'
   },'count_02')
   .to('.sc-intro-2 .section-title',1, { 
     autoAlpha: 1,
-    ease:'none'
+    ease:'none',
+        color : '#000'
   },'count_02')
-  .to('.sc-banner .line-1',1, { 
-    'color' : '#333',
-    'background-color' :'#eee'
-  },'count_02')
+  // .to('body', {
+  //   'background-color' : '#fff',
+  //   duration: 1,
+  //   ease: "none",
+  // }, 'count_02')
 
 
 
 
 
 
-  // --------------- fe projects --------------- 
-  // --- bg 이미지 --- 
-  // var feBgSlide = new Swiper('.sc-fropj .bg-slide', {
-  //   effect:"fade",
-  // });
-
-
-
-
-  bannertl = gsap.timeline({
-    scrollTrigger:{
-      trigger:'.sc-banner',
-      start:"0% 100%",
-      end:"100% 0%",
-      scrub:0,
-    },
+  // sc-work
+  $(".work-item").each(function (index, element){
+    var tl = new TimelineLite({paused:true});
+    tl
+    // .set($(element).find(".thumb-area img")), {
+    //   "border" : '2px solid red',
+    //   yPercent: '-300'
+    // }
+    .to($(element).find(".thumb-area p"), 0.5, {
+        yPercent: '-300',
+      },'img')
+      .to($(element).find(".hover li:nth-child(1) img"), 0.5, {
+        yPercent: '100',
+      },'img')
+      .to($(element).find(".hover li:nth-child(2) img"), 0.5, {
+        delay: 0.1,
+        yPercent: '100',
+      },'img')
+      .to($(element).find(".hover li:nth-child(3) img"), 0.5, {
+        delay: 0.2,
+        yPercent: '100',
+      },'img')
+    element.animation = tl;
   })
-  bannertl.to('.sc-banner .line-1 .banner-line', {xPercent:-30 },'a')
-  bannertl.to('.sc-banner .line-2 .banner-line', {xPercent:30 },'a')
-
-
-
-
-
-
-
-  // --- 리스트 이미지 --- 
-
-    var mainimgSlide = new Swiper('.sc-fropj .fropj-slide', {
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      spaceBetween: 0,
-      speed: 1000,
-      observer: true,
-      observeParents: true,
-      navigation: {
-        nextEl: ".sc-fropj .fropj-slide .navi-next",
-        prevEl: ".sc-fropj .fropj-slide .navi-prev",
-      },
-      pagination: {
-        el: ".sc-fropj .fraction-box",
-        type: "custom",
-        renderCustom: function (swiper, current, total) {
-          return `<span class="curr">${current}</span>
-                  <span>/</span>
-                  <span class="total">${total}</span>`;
-        }
-      },
-      on: {
-        "init" : function() {
-          $('.sc-fropj .curr').text(this.realIndex+1);
-        },
-        "slideChange" : function() {
-          $('.sc-fropj .curr').text(this.realIndex+1);
-        }
-      }
-    });
- 
-
-  // window.addEventListener('resize', function() {
-  //   ww = window.innerWidth;
-  //   responsiveSwiper();
-  // });
-
-
-
-
-
-
-
-
-
-
-
+  $(".work-item").mouseenter(function(){
+    this.animation.play();
+  })
+  $(".work-item").mouseleave(function(){
+    this.animation.reverse(0.2);
+  })
 
 
 
@@ -510,7 +566,7 @@ myprj
   const count_03 = gsap.timeline({
     scrollTrigger:{
       trigger: ".sc-intro-3",
-      start:"0% 70%",
+      start:"20% 50%",
       end:"100% 100%",
       scrub:1,
       ease: "power4.out",
@@ -521,6 +577,10 @@ myprj
     }
   })
   count_03
+  .to('body', {
+    'background-color' : '#000',
+    ease: "none",
+  })
   .to('.sc-intro-3 .intro-cont .prev',1, { 
     y:'-100%',
     ease:'none'
@@ -537,29 +597,131 @@ myprj
 
 
 
+  // sc-banner
+  bannertl = gsap.timeline({
+    scrollTrigger:{
+      trigger:'.sc-banner',
+      start:"0% 50%",
+      end:"100% 0%",
+      scrub:0,
+      duration: 10,
+    },
+  })
+  bannertl.to('.sc-banner .line-1 .banner-line', {xPercent:-40 },'banner')
+  bannertl.to('.sc-banner .line-2 .banner-line', {xPercent:40 },'banner')
+  const mainheadTxt = new SplitType('.sc-banner .gtspan', { types: 'words, chars',});
+  bannertl.to('.sc-banner .gtspan .char', {
+    color : "#fff",
+    ease: "power4.out",
+    stagger: {
+       amount: 1
+    }
+  },'banner')   
+  
 
 
 
-  // --------------- works --------------- 
-  // const div_wraps = document.querySelectorAll('.div_wrap');
-  // document.getElementById('list_ul').addEventListener('mousemove', function(e){
-  //   const x = e.clientX;
-  //   const y = e.clientY;
-  //   div_wraps.forEach(function(div){
-  //     div.style.transform = `translate(${x}px, ${y}px)`;
-  //   });
-  // });
 
-  const list = document.querySelectorAll('.list_li');
-  // forEach의 arrow function
-  list.forEach(li_img => {
-    li_img.addEventListener('mouseover', function(){
-      li_img.querySelector('.div_wrap').style.visibility = 'visible';
-    });
-    li_img.addEventListener('mouseleave', function(){
-      li_img.querySelector('.div_wrap').style.visibility = 'hidden';
-    });
-  });
+
+
+  // sc-fe
+  const fetl = gsap.timeline({
+    scrollTrigger:{
+      trigger: ".sc-fe",
+      start:"0% 70%",
+      end:"100% 100%",
+      scrub:1,
+      ease: "power4.out",
+      skewY: 7,
+      stagger: {
+        amount: 1
+      },
+    }
+  })
+
+
+  const fetlbox = gsap.timeline({
+    scrollTrigger:{
+      trigger: ".sc-fe",
+      start:"0% 100%",
+      end:"100% 100%",
+      scrub:1,
+      ease: "power4.out",
+      skewY: 7,
+      delay : 10,
+      stagger: {
+        amount: 1
+      },
+    }
+  })
+  
+  
+  fetlbox.from('.sc-fe .list-cont .item_list', {
+    width : 0,
+    scrub:1,
+    ease: "power4.out",
+    skewY: 7,
+    stagger: {
+      amount: 1
+    },
+    duration: 10
+  })   
+
+
+
+
+
+
+
+  // sc-exp
+  const expBox = gsap.timeline({
+    scrollTrigger:{
+      trigger: ".sc-exp",
+      start:"0% 45%",
+      end:"100% 100%",
+      scrub:1,
+      ease: "power4.out",
+      skewY: 7,
+      stagger: {
+        amount: 1
+      },
+    }
+  })
+  expBox.to('.sc-exp', {
+    ease: "power4.out",
+    duration: 10,
+    autoAlpha: 1
+  })   
+
+
+
+  
+
+
+
+
+
+
+
+  //footer 
+  const footerTxt = new SplitType('footer .gtspan', { types: 'words, chars',});
+  gsap.from('footer .gtspan .gtspan .char', {
+    y: -100,
+    ease: "power4.out",
+    skewY: 7,
+    yPercent:-100,
+    stagger: {
+      amount: 1
+    }
+  })
+
+
+
+
+  
+
+
+
 
 
 
