@@ -830,6 +830,7 @@
 
   .myprj-wrap .sticky-wrapper .fix-txt {
     font-size: 20px;
+    width: 55%;
   }
   .myprj-wrap section .img-area .desc ul li:nth-child(1) {
     font-size: 30px;
@@ -936,8 +937,11 @@
   .myprj-wrap section .img-area .mo-img {
     display: block;
     object-fit: cover;
+    filter: blur(1.8px);
   }
-
+  .myprj-wrap section .img-area .desc {
+    background: rgba(0, 0, 0, 0.55);
+  }
   .myprj-wrap section .img-area .desc .btn-link a {
     border-bottom: 1px solid #eee;
     border-radius: 0;
