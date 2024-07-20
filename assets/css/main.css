@@ -137,9 +137,6 @@
 }
 .myprj-wrap .sticky-wrapper .fix-txt-cont {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   background-color: #000;
   overflow: hidden;
 }
@@ -830,10 +827,6 @@
 
 /* 모바일  ~767px */
 @media (max-width:768px) {
-
-
- 
-
   .myprj-wrap .sticky-wrapper .fix-txt {
     font-size: 20px;
   }
