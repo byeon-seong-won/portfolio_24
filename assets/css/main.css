@@ -929,7 +929,6 @@
   .myprj-wrap section .img-area .mo-img {
     display: block;
     object-fit: cover;
-    filter: blur(1.8px);
   }
   .myprj-wrap section .img-area .desc {
     background: rgba(0, 0, 0, 0.55);
