@@ -155,15 +155,22 @@
 /* 모바일  ~767px */
 @media (max-width:768px) {
   .sc-intro .sticky-wrapper {
-    height: 15vh;
+    height: 20vh;
   }
   .sc-intro .sticky {
     justify-content: center;
   }
 
+}
 
 
-
-
+/* 모바일  ~767px */
+@media (max-width:600px) {
+  .sc-intro .sticky-wrapper {
+    height: 15vh;
+  }
+  .sc-intro .sticky {
+    justify-content: center;
+  }
 
 }
