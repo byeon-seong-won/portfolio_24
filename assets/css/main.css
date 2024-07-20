@@ -137,6 +137,9 @@
 }
 .myprj-wrap .sticky-wrapper .fix-txt-cont {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   background-color: #000;
   overflow: hidden;
 }
@@ -147,8 +150,9 @@
   transform: translate(-50%,-50%);
   color: #fff;
   font-size: 80px;
+  width: 100%;
+  padding: 0 20%;
   font-weight: bold;
-  width: 50%;
   text-transform: uppercase;
 }
 .myprj-wrap .material-symbols-outlined {
@@ -761,7 +765,6 @@
   }
   .myprj-wrap .sticky-wrapper .fix-txt {
     font-size: 40px;
-    width: 50%;
   }
   .myprj-wrap .material-symbols-outlined {
     font-size: 30px !important;
