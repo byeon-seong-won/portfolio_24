@@ -764,7 +764,7 @@
   }
   .myprj-wrap .sticky-wrapper .fix-txt {
     font-size: 40px;
-    width: 60%;
+    width: 50%;
   }
   .myprj-wrap .material-symbols-outlined {
     font-size: 30px !important;
@@ -791,6 +791,12 @@
   }
   .sc-work .headline {
     font-size: 20px;
+  }
+  .sc-work .work-item .thumb-area p {
+    opacity: 0;
+  }
+  .sc-work .work-item .thumb-area .hover-list {
+    transform: translateY(0);
   }
   .sc-work .work-item .thumb-area .hover-item:last-child {
     display: none;
@@ -830,7 +836,6 @@
 
   .myprj-wrap .sticky-wrapper .fix-txt {
     font-size: 20px;
-    width: 55%;
   }
   .myprj-wrap section .img-area .desc ul li:nth-child(1) {
     font-size: 30px;
@@ -868,12 +873,6 @@
   }
   .sc-work .work-item .thumb-area {
     height: 100px;
-  }
-  .sc-work .work-item .thumb-area p {
-    opacity: 0;
-  }
-  .sc-work .work-item .thumb-area .hover-list {
-    transform: translateY(0);
   }
   .sc-banner .banner-line {
     font-size: 20px;
